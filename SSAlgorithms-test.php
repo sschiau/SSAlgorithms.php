@@ -17,7 +17,7 @@
 
 /**
 * @author Silviu Schiau <pr@silviu.co>
-* @version 1.0.0
+* @version 1.0.1
 * @license Apache License Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.txt
 */
 
@@ -29,10 +29,25 @@ $algorithms = new Algo;
 
 $list = array(18, 2, 6, 1, 5, 6, 1, 0, 43, 16);
 
+$hashTable = [
+	'h' => 1,
+	'e' => 2,
+	'l' => 3,
+	'o' => 4,
+	'w' => 5,
+	'r' => 6,
+	'd' => 7,
+	' ' => 8,
+];
+
+$text = 'hello world';
+$pattern = 'w';
+
 var_dump("*** Unsorted List ***", $list);
 
 var_dump("Bubble Sort", $algorithms->bubbleSort($list));
 var_dump("Quick Sort", 	$algorithms->quickSort($list));
 var_dump("Shell Sort", 	$algorithms->shellSort($list));
+var_dump("Rabin-Karp", 	$algorithms->rabinKarp($text, $pattern, $hashTable));
 
 ?>

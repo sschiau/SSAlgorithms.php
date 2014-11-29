@@ -19,7 +19,7 @@ namespace Schiau;
 /**
 * @package Schiau
 * @author Silviu Schiau <pr@silviu.co>
-* @version 1.0.0
+* @version 1.0.1
 * @license Apache License Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.txt
 */
 
@@ -166,6 +166,48 @@ class SSAlgorithms
 		}
 		
 		return $list;
+	}
+	
+	/* 
+		--------------
+		TEXT SEARCHING 
+		--------------
+	*/
+	
+	// Rabin–Karp
+	// In computer science, the Rabin–Karp algorithm or Karp–Rabin algorithm is a string searching algorithm created by Richard M. Karp and Michael O. Rabin (1987) that uses hashing to find any one of a set of pattern strings in a text. For text of length n and p patterns of combined length m, its average and best case running time is O(n+m) in space O(p), but its worst-case time is O(nm). In contrast, the Aho–Corasick string matching algorithm has asymptotic worst-time complexity O(n+m) in space O(m). A practical application of the algorithm is detecting plagiarism. Given source material, the algorithm can rapidly search through a paper for instances of sentences from the source material, ignoring details such as case and punctuation. Because of the abundance of the sought strings, single-string searching algorithms are impractical.
+	// Complexity: O(n+m) - Worse: O(nm)
+	private function hash_string($str, $len, array $hashTable)
+	{
+		$hash = '';
+ 
+		for ($i = 0; $i < $len; $i++) 
+		{
+			$hash .= $hashTable[$str{$i}];
+		}
+ 
+		return (int)$hash;
+	}
+ 
+	public function rabinKarp($text, $pattern, array $hashTable)
+	{
+		$n = strlen($text);
+		$m = strlen($pattern);
+
+		$text_hash = self::hash_string(substr($text, 0, $m), $m, $hashTable);
+		$pattern_hash = self::hash_string($pattern, $m, $hashTable);
+
+		for ($i = 0; $i < $n-$m+1; $i++)
+		{
+			if ($text_hash == $pattern_hash)
+			{
+				return $i;
+			}
+
+			$text_hash = self::hash_string(substr($text, $i, $m), $m, $hashTable);
+		}
+
+		return -1;
 	}
 }
 ?>
