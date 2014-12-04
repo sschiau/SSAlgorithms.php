@@ -2,8 +2,13 @@
 ####Language: PHP 
 PHP implementation of diverse algorithms (4/200+ - more soon)
 
+1. [Bubble Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
+2. [Quick Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
+3. [Shell Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
+4. [Rabin-Karp](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
+
 ```PHP
-	string '*** Unsorted List ***' (length=21)
+	// Unsorted List
 	array (size=10)
 	  0 => int 18
 	  1 => int 2
@@ -15,9 +20,8 @@ PHP implementation of diverse algorithms (4/200+ - more soon)
 	  7 => int 0
 	  8 => int 43
 	  9 => int 16
-	string 'Bubble Sort' (length=11)
-	string 'Quick Sort' (length=10)
-	string 'Shell Sort' (length=10)
+	
+	// Sorted List 
 	array (size=10)
 	  0 => int 0
 	  1 => int 1
@@ -30,7 +34,7 @@ PHP implementation of diverse algorithms (4/200+ - more soon)
 	  8 => int 18
 	  9 => int 43
 	  
-	string 'Rabin-Karp' (length=10)
+	// Rabin-Karp
 	 int 7
 ```
 
