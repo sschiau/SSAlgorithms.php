@@ -2,10 +2,10 @@
 ####Language: PHP 
 PHP implementation of diverse algorithms (4/200+ - more soon)
 
-1. [Bubble Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
-2. [Quick Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
-3. [Shell Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
-4. [Rabin-Karp](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php)
+1. [Bubble Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php#L78)
+2. [Quick Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php#L106)
+3. [Shell Sort](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php#L131)
+4. [Rabin-Karp](https://github.com/sschiau/SSAlgorithms-PHP/blob/master/SSAlgorithms.php#L177)
 
 ```PHP
 	// Unsorted List
