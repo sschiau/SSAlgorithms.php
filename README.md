@@ -37,7 +37,3 @@ PHP implementation of diverse algorithms (4/200+ - more soon)
 	// Rabin-Karp
 	 int 7
 ```
-
-#### License
-Apache License Version 2.0
-http://www.apache.org/licenses/LICENSE-2.0.txt
